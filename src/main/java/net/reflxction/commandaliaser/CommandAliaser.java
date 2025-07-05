@@ -190,7 +190,7 @@ public class CommandAliaser {
      */
     private void load() {
         for (String s : aliasesStorage.getStringList("Aliases")) {
-            String[] slices = StringUtils.split(s, "_<<<>>>_");
+            String[] slices = StringUtils.splitByWholeSeparator(s, "_<<<>>>_");
             AliasManager.ALIASES.put(slices[0], slices[1]);
         }
     }
